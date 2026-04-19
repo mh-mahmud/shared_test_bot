@@ -1,0 +1,123 @@
+:root{
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent: #0b6cf6;
+  --text: #111827;
+  --muted: #6b7280;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width:720px;
+  margin:28px auto;
+  background: var(--card);
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-height:70vh;
+}
+
+header h1{
+  margin:0;
+  font-size:20px;
+}
+.hint{
+  margin:6px 0 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.controls{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.controls label{font-size:13px;color:var(--muted);min-width:60px}
+.controls input{
+  flex:1;
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid #e6e9ee;
+}
+.controls button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  cursor:pointer;
+}
+.status{margin-left:8px;font-size:13px;color:var(--muted)}
+
+.chat{
+  background:#fbfdff;
+  border-radius:8px;
+  padding:12px;
+  border:1px solid #eef2ff;
+  flex:1;
+  overflow:auto;
+}
+.messages{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.message{
+  max-width:78%;
+  padding:10px 12px;
+  border-radius:10px;
+  line-height:1.35;
+  word-break:break-word;
+}
+.msg-user{
+  align-self:flex-end;
+  background:linear-gradient(180deg,#e8f0ff,#d7e7ff);
+  color:var(--text);
+  border-bottom-right-radius:2px;
+}
+.msg-bot{
+  align-self:flex-start;
+  background:#fff;
+  color:var(--text);
+  border:1px solid #eef2ff;
+  border-bottom-left-radius:2px;
+}
+
+.composer{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:6px;
+}
+.composer input{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ee;
+}
+.composer button{
+  padding:10px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  cursor:pointer;
+}
+
+/* small screens */
+@media (max-width:480px){
+  .container{margin:10px;padding:12px}
+  .controls label{display:none}
+}

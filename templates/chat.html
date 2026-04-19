@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roaming Chatbot — Test UI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Grameenphone Roaming Bot</h1>
+      <p class="hint">Enter a <strong>user id</strong> and chat. Use the same id for a single conversation session.</p>
+    </header>
+
+    <section class="controls">
+      <label for="userId">User ID</label>
+      <input id="userId" type="text" placeholder="e.g. 01765061401" />
+      <button id="startBtn">Start / Use ID</button>
+      <span id="status" class="status"></span>
+    </section>
+
+    <section id="chat" class="chat">
+      <div id="messages" class="messages">
+        <!-- messages will appear here -->
+      </div>
+    </section>
+
+    <form id="composer" class="composer" autocomplete="off">
+      <input id="messageInput" type="text" placeholder="Type your message (in Bangla)..." />
+      <button id="sendBtn" type="submit">Send</button>
+    </form>
+
+    <footer class="footnote">
+      <small>Minimal UI · Plain HTML/CSS/JS</small>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
